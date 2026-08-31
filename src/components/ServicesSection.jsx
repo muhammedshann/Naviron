@@ -57,7 +57,7 @@ export default function ServicesSection({ onNavigate }) {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch min-h-[440px]">
                   
                   {/* Content Area */}
-                  <div className={`lg:col-span-6 p-6 sm:p-12 lg:p-14 flex flex-col justify-center bg-white relative`}>
+                  <div className={`lg:col-span-6 p-6 sm:p-12 lg:p-14 flex flex-col justify-center bg-white relative order-2 lg:order-1`}>
                     <span className="text-xs font-bold uppercase tracking-wider text-lfgreen-dark bg-lfgreen/10 px-3 py-1.5 rounded-full border border-lfgreen/30 inline-block mb-6 w-fit">
                       {svc.badge}
                     </span>
@@ -105,11 +105,11 @@ export default function ServicesSection({ onNavigate }) {
                   </div>
 
                   {/* Image Area */}
-                  <div className={`lg:col-span-6 relative h-[300px] sm:h-[400px] lg:h-auto overflow-hidden group`}>
+                  <div className={`lg:col-span-6 relative h-[220px] sm:h-[320px] lg:h-auto overflow-hidden group order-1 lg:order-2`}>
                     <img
                       src={svc.image}
                       alt={svc.title}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+                      className="absolute inset-0 w-full h-full object-cover "
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-fir/80 via-fir/20 to-transparent" />
                     

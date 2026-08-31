@@ -98,7 +98,7 @@ export default function Hero({ onNavigate }) {
                 <img
                   src="/assets/images/pexels-photo-33670026.jpeg"
                   alt="Modern Construction Doha Qatar"
-                  className="w-full h-[320px] sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[320px] sm:h-[420px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-fir/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/50 shadow-lg">
@@ -117,7 +117,6 @@ export default function Hero({ onNavigate }) {
               {/* Floating Card */}
               <div
                 className="absolute -bottom-4 left-2 sm:-left-10 w-44 sm:w-56 p-3 sm:p-4 rounded-2xl bg-white border border-fir/10 shadow-xl"
-                style={{ animation: 'float 6s ease-in-out infinite' }}
               >
                 <div className="flex items-center gap-2.5 sm:gap-3 mb-2">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-sage border border-fir/10 flex items-center justify-center text-fir text-xs sm:text-sm font-bold">
@@ -136,7 +135,7 @@ export default function Hero({ onNavigate }) {
               {/* Top Right Badge */}
               <div className="absolute -top-3 right-2 sm:-right-8 p-3 sm:p-3.5 rounded-2xl bg-white border border-fir/10 shadow-xl">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-lfgreen animate-pulse" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-lfgreen" />
                   <div>
                     <span className="text-xs font-extrabold text-fir block leading-tight">92% Satisfaction</span>
                     <span className="text-[10px] text-fir/40">Across Qatar Projects</span>

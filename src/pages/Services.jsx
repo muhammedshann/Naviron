@@ -49,7 +49,7 @@ export default function Services({ onNavigate }) {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
                   
                   {/* Text Column */}
-                  <div className={`lg:col-span-6 ${isEven ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}`}>
+                  <div className={`lg:col-span-6 order-2 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
                         isDark
@@ -128,12 +128,12 @@ export default function Services({ onNavigate }) {
                   </div>
 
                   {/* Image Column */}
-                  <div className={`lg:col-span-6 ${isEven ? 'order-2 lg:order-1' : 'order-2 lg:order-2'}`}>
-                    <div className="relative rounded-2xl overflow-hidden shadow-xl h-[360px] sm:h-[440px] group border border-fir/10">
+                  <div className={`lg:col-span-6 order-1 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
+                    <div className="relative rounded-2xl overflow-hidden shadow-xl h-[220px] sm:h-[320px] lg:h-[440px] group border border-fir/10">
                       <img
                         src={svc.image}
                         alt={svc.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover "
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-fir/60 via-transparent to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-white/50">
