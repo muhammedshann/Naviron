@@ -39,7 +39,7 @@ export default function Blog({ onNavigate }) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-sage p-4 sm:p-6 rounded-3xl border border-fir/5 flex flex-col md:flex-row items-center justify-between gap-4"
           >
@@ -85,7 +85,7 @@ export default function Blog({ onNavigate }) {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             {filteredPosts.length === 0 ? (

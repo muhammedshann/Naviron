@@ -25,7 +25,7 @@ export default function Home({ onNavigate }) {
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
             className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
           >

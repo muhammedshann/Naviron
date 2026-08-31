@@ -42,8 +42,8 @@ export default function ProjectEstimator() {
   return (
     <section className="pt-12 pb-24 sm:pt-16 sm:pb-32 bg-gradient-to-b from-[#EEF5FF] via-[#F4F8FE] to-[#EEF5FF] text-[#0A1D16] rounded-3xl sm:rounded-[40px] mt-10 sm:mt-14 relative z-40 shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-blue-200/50 flex items-center">
       {/* Background Soft Blue Ambient Glows */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-sky-300/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-sky-300/15 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
@@ -51,7 +51,7 @@ export default function ProjectEstimator() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-10"
         >

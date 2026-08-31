@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { services } from '../data/content';
 import { Building2, Wrench, ShieldCheck, Truck, ArrowRight, CheckCircle, MessageSquare } from 'lucide-react';
 
@@ -20,7 +20,7 @@ export default function ServicesSection({ onNavigate }) {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="text-center max-w-3xl mx-auto mb-10"
         >
@@ -48,7 +48,7 @@ export default function ServicesSection({ onNavigate }) {
             return (
               <div
                 key={svc.id}
-                className="sticky shadow-[0_-8px_30px_rgba(0,0,0,0.12)] mb-12 sm:mb-20 last:mb-0 border border-fir/10 rounded-3xl overflow-hidden bg-white"
+                className="sticky shadow-[0_-8px_30px_rgba(0,0,0,0.12)] mb-4 sm:mb-6 last:mb-0 border border-fir/10 rounded-3xl overflow-hidden bg-white transform-gpu will-change-transform"
                 style={{
                   top: `${topOffset}px`,
                   zIndex: 10 + index, // Ensure newer cards stack on top of older ones

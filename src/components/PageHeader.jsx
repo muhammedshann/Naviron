@@ -5,12 +5,12 @@ export default function PageHeader({ badge, title, highlightedTitle, titleEnd = 
   return (
     <section className="pt-8 pb-4 sm:pt-12 sm:pb-6 text-center relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-lfgreen/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-lfgreen/10 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
       
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-50px' }}
+        viewport={{ once: true }}
         transition={{ duration: 0.7 }}
         className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
       >

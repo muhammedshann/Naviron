@@ -40,7 +40,7 @@ export default function Services({ onNavigate }) {
                 key={svc.id}
                 id={svc.id}
                 style={{ top: `${topOffset}px`, zIndex: 10 + index }}
-                className={`sticky shadow-[0_-8px_30px_rgba(0,0,0,0.12)] mb-12 sm:mb-20 last:mb-0 rounded-3xl p-8 sm:p-12 border ${
+                className={`sticky shadow-[0_-8px_30px_rgba(0,0,0,0.12)] mb-4 sm:mb-6 last:mb-0 rounded-3xl p-8 sm:p-12 border transform-gpu will-change-transform ${
                   isDark
                     ? 'bg-fir text-white border-white/10'
                     : 'bg-sage text-fir border-fir/5'

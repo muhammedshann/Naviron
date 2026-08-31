@@ -7,14 +7,14 @@ export default function CTABanner({ onNavigate }) {
   return (
     <section className="pt-12 pb-12 sm:pt-16 sm:pb-16 bg-fir text-white rounded-t-[36px] sm:rounded-t-[48px] -mt-10 sm:-mt-14 relative z-[60] shadow-[0_-20px_50px_rgba(0,0,0,0.2)] overflow-hidden border-t border-white/15">
       {/* Ambient glow */}
-      <div className="absolute -top-24 -left-24 w-80 h-80 bg-lfgreen/15 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-mint/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute -top-24 -left-24 w-80 h-80 bg-lfgreen/15 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
+      <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-mint/15 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-50px' }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="max-w-2xl mx-auto relative z-10 text-center"
         >

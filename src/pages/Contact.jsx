@@ -48,7 +48,7 @@ export default function Contact({ onNavigate }) {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
+            viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="grid grid-cols-1 lg:grid-cols-12 gap-10"
           >
