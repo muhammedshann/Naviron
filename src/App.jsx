@@ -32,7 +32,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-gray-900 relative">
+    <div className="min-h-screen flex flex-col bg-white text-fir relative">
       <Navbar activePage={activePage} setActivePage={setActivePage} />
       <main className="flex-grow">{renderPage()}</main>
       <FloatingWhatsApp />

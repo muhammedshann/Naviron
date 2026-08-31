@@ -1,71 +1,59 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { testimonials } from '../data/content';
-import { Quote, Star, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
-// We'll duplicate cards for the infinite marquee effect
-const extendedTestimonials = [...testimonials, ...testimonials, ...testimonials, ...testimonials];
-
-// Additional testimonials to fill up the marquee
-const additionalQuotes = [
-  {
-    id: 3,
-    name: 'Mohammed Al-Kuwari',
-    role: 'Infrastructure Director',
-    location: 'Doha, Qatar',
-    avatar: '/assets/images/testimonial-skip-01.jpg',
-    quote: 'Naviron delivered our maintenance project ahead of schedule. Their attention to detail and proactive communication made the entire process seamless.',
-    rating: 5,
-  },
-  {
-    id: 4,
-    name: 'Fatima Al-Thani',
-    role: 'Procurement Manager',
-    location: 'Qatar',
-    avatar: '/assets/images/testimonial-skip-02.jpg',
-    quote: 'The specialized trading solutions from Naviron gave us access to certified materials that exceeded international quality standards. A reliable partner for any scale.',
-    rating: 5,
-  },
-];
-
-const allCards = [...testimonials, ...additionalQuotes, ...testimonials, ...additionalQuotes];
+const allCards = [...testimonials, ...testimonials];
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-gray-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <section className="pt-16 pb-16 sm:pt-20 sm:pb-20 bg-[#F3F5F2] text-fir rounded-t-[40px] sm:rounded-t-[56px] -mt-12 sm:-mt-16 relative z-70 shadow-[0_-15px_40px_rgba(0,0,0,0.06)] overflow-hidden border-t border-fir/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         {/* Section Header */}
-        <div className="text-center">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white border border-gray-200 text-xs font-semibold text-brand-600 mb-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="text-center"
+        >
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white border border-fir/10 text-xs font-semibold text-fir/70 mb-4 shadow-sm">
             Testimonials
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-brand-dark">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-fir tracking-tight">
             Hear from our clients
           </h2>
-        </div>
+        </motion.div>
       </div>
 
-      {/* Marquee Row - Auto-scrolling left */}
-      <div className="relative w-full">
-        {/* Gradient faders on edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+      {/* Marquee Row — Auto-scrolling left */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        className="relative w-full"
+      >
+        {/* Gradient edge faders */}
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-36 bg-gradient-to-r from-[#F3F5F2] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-36 bg-gradient-to-l from-[#F3F5F2] to-transparent z-10 pointer-events-none" />
 
-        <div className="flex animate-marquee marquee-track gap-6 w-max">
+        <div className="flex animate-marquee marquee-track gap-4 sm:gap-6 w-max py-2">
           {allCards.map((item, idx) => (
             <div
               key={`${item.id}-${idx}`}
-              className="w-[340px] sm:w-[380px] flex-shrink-0 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between"
+              className="w-[280px] sm:w-[380px] flex-shrink-0 bg-white rounded-3xl p-5 sm:p-7 border border-fir/10 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               {/* Quote Text */}
               <div className="mb-6">
-                <p className="text-[15px] text-gray-700 leading-relaxed font-medium">
+                <p className="text-[15px] text-fir leading-relaxed font-medium">
                   &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
 
               {/* Author Row */}
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-50">
-                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-gray-100 flex-shrink-0">
+              <div className="flex items-center gap-3 pt-4 border-t border-fir/10">
+                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-sage flex-shrink-0 shadow-sm">
                   <img
                     src={item.avatar}
                     alt={item.name}
@@ -73,11 +61,11 @@ export default function Testimonials() {
                   />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-brand-dark flex items-center gap-1">
+                  <h4 className="text-sm font-bold text-fir flex items-center gap-1">
                     {item.name}
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-500" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-lfgreen-dark" />
                   </h4>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-xs text-fir/50">
                     {item.role} &bull; {item.location || 'Qatar'}
                   </p>
                 </div>
@@ -85,7 +73,7 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

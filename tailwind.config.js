@@ -7,6 +7,24 @@ export default {
   theme: {
     extend: {
       colors: {
+        fir: {
+          DEFAULT: '#0A1D16', // Deep Charcoal Gulf Green (almost black)
+          light: '#143327',
+          dark: '#06130E',
+        },
+        lfgreen: {
+          DEFAULT: '#A3E635',
+          100: '#B5F04A',
+          dark: '#84CC16',
+        },
+        sage: {
+          DEFAULT: '#F3F5F2',
+          dark: '#E8EBE6',
+        },
+        mint: {
+          DEFAULT: '#9CE0DB',
+          light: '#C5EDE9',
+        },
         brand: {
           50: '#f0fdfa',
           100: '#ccfbf1',
@@ -18,11 +36,11 @@ export default {
           700: '#0f766e',
           800: '#115e59',
           900: '#134e4a',
-          lime: '#ABFF44',
-          limeDark: '#8FD934',
-          dark: '#1a1a2e',
-          darker: '#0f172a',
-        }
+          lime: '#A3E635',
+          limeDark: '#84CC16',
+          dark: '#0A1D16',
+          darker: '#06130E',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'Plus Jakarta Sans', 'system-ui', 'sans-serif'],
@@ -33,8 +51,9 @@ export default {
         '5xl': '2.5rem',
       },
       animation: {
-        'marquee': 'marquee 35s linear infinite',
-        'marquee-reverse': 'marquee-reverse 35s linear infinite',
+        'marquee': 'marquee 40s linear infinite',
+        'marquee-reverse': 'marquee-reverse 40s linear infinite',
+        'fade-up': 'fadeUp 0.6s ease-out forwards',
       },
       keyframes: {
         marquee: {
@@ -45,7 +64,11 @@ export default {
           '0%': { transform: 'translateX(-50%)' },
           '100%': { transform: 'translateX(0%)' },
         },
-      }
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
     },
   },
   plugins: [],

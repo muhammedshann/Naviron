@@ -133,6 +133,46 @@ export const testimonials = [
     quote: "The quality of service we received from Naviron was exceptional. They were committed to our satisfaction and made the entire process seamless. We couldn’t be happier!",
     rating: 5,
     projectScope: "Turnkey Maintenance & Facilities Management"
+  },
+  {
+    id: 3,
+    name: "Mohammed Al-Kuwari",
+    role: "Infrastructure Director",
+    location: "Doha, Qatar",
+    avatar: "/assets/images/testimonial-skip-01.jpg",
+    quote: "Naviron delivered our maintenance project ahead of schedule. Their attention to detail and proactive communication made the entire process seamless.",
+    rating: 5,
+    projectScope: "Infrastructure Preservation"
+  },
+  {
+    id: 4,
+    name: "Fatima Al-Thani",
+    role: "Procurement Manager",
+    location: "Qatar",
+    avatar: "/assets/images/testimonial-skip-02.jpg",
+    quote: "The specialized trading solutions from Naviron gave us access to certified materials that exceeded international quality standards. A reliable partner for any scale.",
+    rating: 5,
+    projectScope: "Certified Material Procurement"
+  },
+  {
+    id: 5,
+    name: "Ahmed Hassan",
+    role: "Site Engineer",
+    location: "Al Wakra, Qatar",
+    avatar: "/assets/images/testimonial-skip-01.jpg",
+    quote: "Working with Naviron on our commercial tower project was an outstanding experience. Their engineering team brought precision and innovation to every phase.",
+    rating: 5,
+    projectScope: "Structural Concrete & Steel"
+  },
+  {
+    id: 6,
+    name: "Noura Al-Sulaiti",
+    role: "Facilities Director",
+    location: "Lusail, Qatar",
+    avatar: "/assets/images/testimonial-skip-02.jpg",
+    quote: "From initial consultation to final handover, Naviron demonstrated professionalism that set them apart. Their sustainable approach aligned perfectly with our vision.",
+    rating: 5,
+    projectScope: "Sustainable Architectural Solutions"
   }
 ];
 
@@ -156,40 +196,28 @@ export const blogPosts = [
   },
   {
     id: "post-2",
-    title: "The Art of Drawing Readers In: Your attractive post title goes here",
+    title: "Advancing HVAC & Preventive Upkeep in Qatari Climate Conditions",
     category: "Insights & Strategy",
-    date: "June 21, 2026",
-    author: "Naviron Editorial",
+    date: "August 14, 2026",
+    author: "Naviron Engineering Desk",
     image: "/assets/images/pexels-photo-10743330.jpeg",
-    excerpt: "The initial impression your blog post makes is crucial, and that's where your introduction comes into play. Hook your readers with a captivating opening that sparks curiosity...",
+    excerpt: "Maintaining high-rise HVAC systems and structural Integrity in coastal and desert climates requires proactive diagnostics and specialized anti-corrosion materials...",
     content: [
-      "Engaging Introductions: Capturing Your Audience's Interest: The initial impression your blog post makes is crucial, and that's where your introduction comes into play. Hook your readers with a captivating opening that sparks curiosity or emotion. Address their pain points or questions to establish a connection. Outline the purpose of your post and give a sneak peek into what they can expect. A well-crafted introduction sets the tone for an immersive reading experience.",
-      "Crafting Informative and Cohesive Body Content: Within the body of your blog post lies the heart of your message. Break down your content into coherent sections, each with a clear heading that guides readers through the narrative. Dive deep into each subtopic, providing valuable insights, data, and relatable examples. Maintain a logical flow between paragraphs using transitions, ensuring your ideas seamlessly connect."
+      "Operating complex civil facilities in Qatar presents distinct environmental considerations. High ambient summer temperatures, ambient dust, and coastal humidity require rigorous preventive maintenance schedules to safeguard HVAC equipment and structural concrete integrity.",
+      "At Naviron, our facility management protocols integrate continuous sensor diagnostics with regular preventative inspections. By treating potential equipment stress points before failures occur, commercial assets maintain uninterrupted operational efficiency and reduced lifecycle expenses."
     ]
   },
   {
     id: "post-3",
-    title: "Mastering the First Impression: Your intriguing post title goes here",
+    title: "ISO-Certified Supply Chains: Mitigating Risk in Qatari Procurement",
     category: "Industry Standards",
-    date: "June 21, 2026",
-    author: "Naviron Editorial",
+    date: "August 28, 2026",
+    author: "Naviron Trade Division",
     image: "/assets/images/pexels-photo-34793640.jpeg",
-    excerpt: "Engaging Introductions: Capturing Your Audience's Interest. Within the body of your blog post lies the heart of your message. Break down your content into coherent sections...",
+    excerpt: "Streamlining international material sourcing with customs compliance ensures that critical steel, MEP components, and aggregates reach active sites without delay...",
     content: [
-      "Engaging Introductions: Capturing Your Audience's Interest: The initial impression your blog post makes is crucial, and that's where your introduction comes into play. Hook your readers with a captivating opening that sparks curiosity or emotion. Address their pain points or questions to establish a connection. Outline the purpose of your post and give a sneak peek into what they can expect. A well-crafted introduction sets the tone for an immersive reading experience.",
-      "Crafting Informative and Cohesive Body Content: Within the body of your blog post lies the heart of your message. Break down your content into coherent sections, each with a clear heading that guides readers through the narrative. Dive deep into each subtopic, providing valuable insights, data, and relatable examples. Maintain a logical flow between paragraphs using transitions, ensuring your ideas seamlessly connect."
-    ]
-  },
-  {
-    id: "hello-world",
-    title: "Hello world!",
-    category: "General",
-    date: "June 21, 2026",
-    author: "Naviron Team",
-    image: "/assets/images/pexels-photo-33670026.jpeg",
-    excerpt: "Welcome to WordPress. This is your first post. Edit or delete it, then start writing!",
-    content: [
-      "Welcome to WordPress. This is your first post. Edit or delete it, then start writing!"
+      "Timely project completion hinges on robust supply chain management. Naviron's specialized trading division directly partners with international manufacturers to source ISO-certified steel, heavy machinery, and precision tooling tailored to Qatari standards.",
+      "By managing customs logistics and quality verification prior to site arrival, we eliminate bottleneck delays and ensure full compliance with Qatar National Vision 2030 building guidelines."
     ]
   }
 ];

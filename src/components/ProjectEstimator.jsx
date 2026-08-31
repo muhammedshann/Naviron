@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Calculator, MessageSquare, ArrowRight, Check, Sparkles, Building, Clock, Layers } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Calculator, MessageSquare, ArrowRight, Check, Sparkles, Building, Clock, Layers, Wrench, ShieldCheck, Truck, CheckCircle2 } from 'lucide-react';
 import { companyInfo } from '../data/content';
 
 export default function ProjectEstimator() {
@@ -8,203 +9,236 @@ export default function ProjectEstimator() {
   const [timeline, setTimeline] = useState('standard');
 
   const serviceOptions = [
-    { id: 'civil-construction', name: 'Civil Construction', icon: 'Building' },
-    { id: 'infrastructure-maintenance', name: 'Infrastructure Maintenance', icon: 'Wrench' },
-    { id: 'project-support', name: 'Project Support Services', icon: 'Shield' },
-    { id: 'specialized-trading', name: 'Specialized Trading', icon: 'Truck' },
+    { id: 'civil-construction', name: 'Civil Construction', icon: Building, desc: 'Structural engineering' },
+    { id: 'infrastructure-maintenance', name: 'Facility Upkeep', icon: Wrench, desc: 'HVAC & preservation' },
+    { id: 'project-support', name: 'Project Support', icon: ShieldCheck, desc: 'QC site management' },
+    { id: 'specialized-trading', name: 'Specialized Trading', icon: Truck, desc: 'ISO certified materials' },
   ];
 
   const scaleOptions = [
-    { id: 'residential', name: 'Residential / Villa', detail: 'Private or residential compound' },
-    { id: 'commercial', name: 'Commercial High-Rise', detail: 'Office, retail or civic tower' },
-    { id: 'industrial', name: 'Industrial / Logistics', detail: 'Warehouse or facility complex' },
-    { id: 'custom', name: 'Bespoke Custom Scope', detail: 'Tailored Qatari infrastructure' },
+    { id: 'residential', name: 'Residential Villa', detail: 'Private luxury compound' },
+    { id: 'commercial', name: 'Commercial Tower', detail: 'Corporate high-rise' },
+    { id: 'industrial', name: 'Industrial Facility', detail: 'Warehouse or energy site' },
+    { id: 'custom', name: 'Bespoke Gulf Scope', detail: 'Tailored Qatari infrastructure' },
   ];
 
   const timelineOptions = [
-    { id: 'urgent', name: 'Immediate / Urgent', detail: 'Mobilize within 7 days' },
-    { id: 'standard', name: 'Standard Schedule', detail: 'Phase-driven execution' },
-    { id: 'planning', name: 'Future Planning', detail: 'Feasibility & design stage' },
+    { id: 'urgent', name: 'Immediate (7 Days)' },
+    { id: 'standard', name: 'Standard Milestone Plan' },
+    { id: 'planning', name: 'Future Feasibility' },
   ];
 
   const getWhatsappMessage = () => {
     const sName = serviceOptions.find((s) => s.id === selectedService)?.name;
     const scName = scaleOptions.find((s) => s.id === projectScale)?.name;
     const tName = timelineOptions.find((t) => t.id === timeline)?.name;
-    return `Hello Naviron Team, I would like to consult on a project with the following scope:%0A- Service: ${encodeURIComponent(
+    return `Hello Naviron Engineering Desk, I would like to consult on a project in Qatar:%0A- Service: ${encodeURIComponent(
       sName
-    )}%0A- Project Scale: ${encodeURIComponent(scName)}%0A- Timeline: ${encodeURIComponent(
+    )}%0A- Sector: ${encodeURIComponent(scName)}%0A- Timeline: ${encodeURIComponent(
       tName
-    )}%0A%0APlease provide available consultation slots.`;
+    )}%0A%0APlease assign a senior project manager for a consultation call.`;
   };
 
   return (
-    <section className="py-20 relative z-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="pt-12 pb-24 sm:pt-16 sm:pb-32 bg-gradient-to-b from-[#EEF5FF] via-[#F4F8FE] to-[#EEF5FF] text-[#0A1D16] rounded-3xl sm:rounded-[40px] mt-10 sm:mt-14 relative z-40 shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-blue-200/50 flex items-center">
+      {/* Background Soft Blue Ambient Glows */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-sky-300/15 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
-        <div className="glass-panel-glow rounded-3xl p-8 sm:p-12 border border-brand-teal/40 relative overflow-hidden">
-          
-          {/* Background Ambient Mesh */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-brand-cyan/10 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-teal/10 rounded-full blur-[100px] pointer-events-none" />
-
-          {/* Header */}
-          <div className="text-center max-w-2xl mx-auto mb-12 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-teal/20 border border-brand-teal/40 text-xs font-bold text-brand-cyan mb-3">
-              <Calculator className="w-3.5 h-3.5" />
-              <span>Interactive Project Planner</span>
-            </div>
-            <h2 className="text-2xl sm:text-4xl font-display font-bold text-white mb-3">
-              Plan Your Project &amp; Get an Instant Consultation
-            </h2>
-            <p className="text-sm sm:text-base text-slate-300">
-              Configure your project scope below to receive a personalized roadmap and connect directly with our chief engineers.
-            </p>
+        {/* Header - Centered & Spacious */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-10"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-200/80 text-xs font-semibold text-[#0A1D16] mb-4 shadow-sm">
+            <Calculator className="w-3.5 h-3.5 text-blue-600" />
+            <span>GCC Scope Configurator</span>
           </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-[#0A1D16] tracking-tight mb-4">
+            Plan Your Project &amp; <span className="text-3d-sm">Get an Estimate</span>
+          </h2>
+          <p className="text-sm sm:text-base text-[#334155] max-w-xl mx-auto">
+            Select your requirements to calculate project parameters and connect directly with our Doha engineers.
+          </p>
+        </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start relative z-10"
+        >
+          {/* Left Controls - Spacious Grid */}
+          <div className="lg:col-span-8 space-y-8">
             
-            {/* Left Controls: Selectors */}
-            <div className="lg:col-span-8 space-y-8">
+            {/* Step 1 */}
+            <div>
+              <label className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-[#0A1D16] mb-3">
+                <Layers className="w-4 h-4 text-blue-600" />
+                <span>1. Primary Capability</span>
+              </label>
               
-              {/* Step 1: Service Division */}
-              <div>
-                <label className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-brand-cyan mb-3">
-                  <Layers className="w-4 h-4" />
-                  <span>1. Select Service Category</span>
-                </label>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  {serviceOptions.map((opt) => {
-                    const isSelected = selectedService === opt.id;
-                    return (
-                      <button
-                        key={opt.id}
-                        onClick={() => setSelectedService(opt.id)}
-                        className={`p-4 rounded-2xl text-left transition-all duration-200 border ${
-                          isSelected
-                            ? 'bg-brand-teal/25 border-brand-cyan text-white shadow-md shadow-brand-teal/20 scale-[1.02]'
-                            : 'glass-panel border-white/10 text-slate-300 hover:border-white/20'
-                        }`}
-                      >
-                        <div className="text-xs font-bold">{opt.name}</div>
-                      </button>
-                    );
-                  })}
-                </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {serviceOptions.map((opt) => {
+                  const Icon = opt.icon;
+                  const isSelected = selectedService === opt.id;
+                  return (
+                    <button
+                      key={opt.id}
+                      onClick={() => setSelectedService(opt.id)}
+                      className={`p-4 rounded-xl text-left transition-all duration-200 border flex items-center gap-3.5 ${
+                        isSelected
+                          ? 'bg-white border-blue-500 ring-1 ring-blue-400 shadow-md scale-[1.01]'
+                          : 'bg-white/90 border-blue-100/80 hover:bg-white hover:border-blue-300'
+                      }`}
+                    >
+                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${
+                        isSelected ? 'bg-blue-600 text-white' : 'bg-[#EBF3FC] text-blue-700'
+                      }`}>
+                        <Icon className="w-5 h-5" />
+                      </div>
+                      <div className="flex-grow min-w-0">
+                        <span className="text-sm font-bold text-[#0A1D16] block leading-tight truncate">{opt.name}</span>
+                        <p className="text-xs text-[#64748B] mt-1 leading-snug truncate">{opt.desc}</p>
+                      </div>
+                      {isSelected && (
+                        <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 ml-1" />
+                      )}
+                    </button>
+                  );
+                })}
               </div>
-
-              {/* Step 2: Project Scale */}
-              <div>
-                <label className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-brand-cyan mb-3">
-                  <Building className="w-4 h-4" />
-                  <span>2. Project Scale &amp; Sector</span>
-                </label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {scaleOptions.map((scale) => {
-                    const isSelected = projectScale === scale.id;
-                    return (
-                      <button
-                        key={scale.id}
-                        onClick={() => setProjectScale(scale.id)}
-                        className={`p-4 rounded-2xl text-left transition-all duration-200 border ${
-                          isSelected
-                            ? 'bg-brand-teal/25 border-brand-cyan text-white shadow-md shadow-brand-teal/20 scale-[1.01]'
-                            : 'glass-panel border-white/10 text-slate-300 hover:border-white/20'
-                        }`}
-                      >
-                        <div className="text-sm font-bold text-white mb-0.5">{scale.name}</div>
-                        <div className="text-xs text-slate-400">{scale.detail}</div>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Step 3: Timeline */}
-              <div>
-                <label className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-brand-cyan mb-3">
-                  <Clock className="w-4 h-4" />
-                  <span>3. Execution Timeline</span>
-                </label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  {timelineOptions.map((t) => {
-                    const isSelected = timeline === t.id;
-                    return (
-                      <button
-                        key={t.id}
-                        onClick={() => setTimeline(t.id)}
-                        className={`p-4 rounded-2xl text-left transition-all duration-200 border ${
-                          isSelected
-                            ? 'bg-brand-teal/25 border-brand-cyan text-white shadow-md shadow-brand-teal/20 scale-[1.01]'
-                            : 'glass-panel border-white/10 text-slate-300 hover:border-white/20'
-                        }`}
-                      >
-                        <div className="text-xs font-bold text-white mb-0.5">{t.name}</div>
-                        <div className="text-[11px] text-slate-400">{t.detail}</div>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
             </div>
 
-            {/* Right Summary & Action Card */}
-            <div className="lg:col-span-4 glass-panel rounded-3xl p-6 sm:p-8 border border-white/15 bg-gradient-to-b from-white/5 to-transparent">
-              <h3 className="text-lg font-bold text-white mb-4 pb-3 border-b border-white/10 flex items-center justify-between">
-                <span>Scope Overview</span>
-                <Sparkles className="w-4 h-4 text-brand-cyan" />
-              </h3>
+            {/* Step 2 */}
+            <div>
+              <label className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-[#0A1D16] mb-3">
+                <Building className="w-4 h-4 text-blue-600" />
+                <span>2. Project Sector</span>
+              </label>
 
-              <div className="space-y-4 mb-6 text-sm">
-                <div>
-                  <span className="text-xs text-slate-400 block">Service Focus</span>
-                  <strong className="text-white font-semibold capitalize">
-                    {serviceOptions.find((s) => s.id === selectedService)?.name}
-                  </strong>
-                </div>
-
-                <div>
-                  <span className="text-xs text-slate-400 block">Sector Scale</span>
-                  <strong className="text-white font-semibold">
-                    {scaleOptions.find((s) => s.id === projectScale)?.name}
-                  </strong>
-                </div>
-
-                <div>
-                  <span className="text-xs text-slate-400 block">Urgency</span>
-                  <strong className="text-white font-semibold">
-                    {timelineOptions.find((t) => t.id === timeline)?.name}
-                  </strong>
-                </div>
-
-                <div className="pt-3 border-t border-white/10">
-                  <span className="text-xs text-brand-cyan font-bold block mb-1">Corporate Assurance</span>
-                  <p className="text-xs text-slate-300">
-                    Full compliance with Qatar construction regulations, dedicated QC engineering supervision, and 20+ years Ainsnan backing.
-                  </p>
-                </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {scaleOptions.map((scale) => {
+                  const isSelected = projectScale === scale.id;
+                  return (
+                    <button
+                      key={scale.id}
+                      onClick={() => setProjectScale(scale.id)}
+                      className={`p-4 rounded-xl text-left transition-all duration-200 border flex items-center justify-between gap-3 ${
+                        isSelected
+                          ? 'bg-white border-blue-500 ring-1 ring-blue-400 shadow-md scale-[1.01]'
+                          : 'bg-white/90 border-blue-100/80 hover:bg-white hover:border-blue-300'
+                      }`}
+                    >
+                      <div className="flex-grow min-w-0">
+                        <div className="text-sm font-bold text-[#0A1D16] leading-tight truncate">{scale.name}</div>
+                        <div className="text-xs text-[#64748B] mt-1 leading-snug truncate">{scale.detail}</div>
+                      </div>
+                      {isSelected && (
+                        <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 ml-1" />
+                      )}
+                    </button>
+                  );
+                })}
               </div>
+            </div>
 
-              {/* Submit to WhatsApp */}
-              <a
-                href={`https://wa.me/97450909707?text=${getWhatsappMessage()}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-full font-bold text-xs uppercase tracking-wider bg-emerald-500 hover:bg-emerald-400 text-white shadow-xl shadow-emerald-500/25 transition-all duration-300 hover:scale-105"
-              >
-                <MessageSquare className="w-4 h-4" />
-                <span>Send Scope to WhatsApp</span>
-              </a>
+            {/* Step 3 */}
+            <div>
+              <label className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-[#0A1D16] mb-3">
+                <Clock className="w-4 h-4 text-blue-600" />
+                <span>3. Target Schedule</span>
+              </label>
 
-              <p className="text-[11px] text-center text-slate-400 mt-3">
-                Immediate response from our Doha engineering team.
-              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {timelineOptions.map((t) => {
+                  const isSelected = timeline === t.id;
+                  return (
+                    <button
+                      key={t.id}
+                      onClick={() => setTimeline(t.id)}
+                      className={`p-4 rounded-xl text-left transition-all duration-200 border flex items-center justify-between gap-2 ${
+                        isSelected
+                          ? 'bg-white border-blue-500 ring-1 ring-blue-400 shadow-md scale-[1.01]'
+                          : 'bg-white/90 border-blue-100/80 hover:bg-white hover:border-blue-300'
+                      }`}
+                    >
+                      <span className="text-sm font-bold text-[#0A1D16] leading-tight truncate pr-1">{t.name}</span>
+                      {isSelected && (
+                        <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
           </div>
 
-        </div>
+          {/* Right Summary Card - Spacious */}
+          <div className="lg:col-span-4 bg-white rounded-3xl p-5 sm:p-7 border border-blue-100 shadow-xl lg:sticky lg:top-28">
+            <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-5">
+              <div>
+                <span className="text-[10px] uppercase font-extrabold text-blue-600 tracking-wider block">Live Estimate</span>
+                <h3 className="text-lg font-bold text-[#0A1D16]">Project Scope</h3>
+              </div>
+              <div className="w-9 h-9 rounded-full bg-blue-50 border border-blue-200/60 flex items-center justify-center text-blue-600">
+                <Sparkles className="w-4 h-4" />
+              </div>
+            </div>
+
+            <div className="space-y-3.5 mb-6">
+              <div className="p-4 rounded-xl bg-[#F0F6FF] border border-blue-100/60 flex flex-col justify-center">
+                <span className="text-[11px] text-[#64748B] font-medium leading-none mb-1.5">Selected Capability</span>
+                <strong className="text-[#0A1D16] font-bold text-sm leading-none">
+                  {serviceOptions.find((s) => s.id === selectedService)?.name}
+                </strong>
+              </div>
+
+              <div className="p-4 rounded-xl bg-[#F0F6FF] border border-blue-100/60 flex flex-col justify-center">
+                <span className="text-[11px] text-[#64748B] font-medium leading-none mb-1.5">Sector Scope</span>
+                <strong className="text-[#0A1D16] font-bold text-sm leading-none">
+                  {scaleOptions.find((s) => s.id === projectScale)?.name}
+                </strong>
+              </div>
+
+              <div className="p-4 rounded-xl bg-[#F0F6FF] border border-blue-100/60 flex flex-col justify-center">
+                <span className="text-[11px] text-[#64748B] font-medium leading-none mb-1.5">Target Timeline</span>
+                <strong className="text-[#0A1D16] font-bold text-sm leading-none">
+                  {timelineOptions.find((t) => t.id === timeline)?.name}
+                </strong>
+              </div>
+            </div>
+
+            <div className="mb-6 bg-sage/50 p-4 rounded-xl border border-fir/5">
+               <div className="flex items-center gap-2 text-xs font-bold text-[#0A1D16] mb-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                  <span>Qatari Compliance Included</span>
+                </div>
+                <p className="text-[11px] text-[#64748B] leading-snug">
+                  MME & Civil Defense standards verified.
+                </p>
+            </div>
+
+            {/* Submit to WhatsApp */}
+            <a
+              href={`https://wa.me/97450909707?text=${getWhatsappMessage()}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary w-full justify-center !py-4 shadow-md"
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span>Dispatch via WhatsApp</span>
+            </a>
+          </div>
+
+        </motion.div>
 
       </div>
     </section>
