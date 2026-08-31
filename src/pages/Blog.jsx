@@ -107,7 +107,7 @@ export default function Blog({ onNavigate }) {
                           <img
                             src={filteredPosts[0].image}
                             alt={filteredPosts[0].title}
-                            className="w-full h-full object-cover "
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                           />
                         </div>
                       </div>
@@ -154,7 +154,7 @@ export default function Blog({ onNavigate }) {
                             <img
                               src={post.image}
                               alt={post.title}
-                              className="w-full h-full object-cover "
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             />
                           </div>
                         </div>
@@ -202,7 +202,7 @@ export default function Blog({ onNavigate }) {
                             <img
                               src={post.image}
                               alt={post.title}
-                              className="w-full h-full object-cover "
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             />
                           </div>
 

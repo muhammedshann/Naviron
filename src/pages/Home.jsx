@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
 import StatsSection from '../components/StatsSection';
 import ServicesSection from '../components/ServicesSection';
-import ProjectEstimator from '../components/ProjectEstimator';
+
 import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
 import CTABanner from '../components/CTABanner';
@@ -62,7 +62,7 @@ export default function Home({ onNavigate }) {
                 <img
                   src="/assets/images/pexels-photo-31732877.jpeg"
                   alt="Naviron Engineering Team"
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-fir/60 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/50 shadow-lg">
@@ -77,9 +77,6 @@ export default function Home({ onNavigate }) {
 
       {/* 4. Core Services Showcase */}
       <ServicesSection onNavigate={onNavigate} />
-
-      {/* 5. Interactive Project Scope Estimator */}
-      <ProjectEstimator />
 
       {/* 6. Why Choose Us */}
       <WhyChooseUs />

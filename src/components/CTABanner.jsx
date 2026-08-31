@@ -5,10 +5,8 @@ import { companyInfo } from '../data/content';
 
 export default function CTABanner({ onNavigate }) {
   return (
-    <section className="pt-12 pb-12 sm:pt-16 sm:pb-16 bg-fir text-white rounded-t-[36px] sm:rounded-t-[48px] -mt-10 sm:-mt-14 relative z-[60] shadow-[0_-20px_50px_rgba(0,0,0,0.2)] overflow-hidden border-t border-white/15">
-      {/* Ambient glow */}
-      <div className="absolute -top-24 -left-24 w-80 h-80 bg-lfgreen/15 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
-      <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-mint/15 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
+    <section className="pt-12 pb-12 sm:pt-16 sm:pb-16 bg-fir text-white rounded-t-[36px] sm:rounded-t-[48px] -mt-10 sm:-mt-14 relative z-80 shadow-[0_-20px_50px_rgba(0,0,0,0.2)] overflow-hidden border-t border-white/15">
+      {/* Ambient glow removed for mobile performance and to prevent Safari rendering glitches */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

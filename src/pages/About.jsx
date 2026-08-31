@@ -62,7 +62,7 @@ export default function About({ onNavigate }) {
                 <img
                   src="/assets/images/pexels-photo-10546989.jpeg"
                   alt="Naviron Engineering Mission"
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-fir/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/50 shadow-lg">
@@ -234,7 +234,7 @@ export default function About({ onNavigate }) {
                 <img
                   src="/assets/images/pexels-photo-31732877.jpeg"
                   alt="Naviron Legacy Doha"
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-fir/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/50 shadow-lg">

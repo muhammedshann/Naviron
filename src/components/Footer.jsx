@@ -139,13 +139,13 @@ export default function Footer({ onNavigate }) {
         </motion.div>
 
         {/* Footer Bottom Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30 text-center sm:text-left">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/30">
           <div>
             &copy; {currentYear} Naviron Qatar. All rights reserved.
           </div>
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-4">
             <span>Sister Company of <strong className="text-white/50">Ainsnan Trading &amp; Contracting</strong></span>
-            <span className="hidden sm:inline">&bull;</span>
+            <span>&bull;</span>
             <span>CR: {companyInfo.crNumber}</span>
           </div>
         </div>

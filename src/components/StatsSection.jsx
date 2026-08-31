@@ -82,9 +82,7 @@ export default function StatsSection() {
       ref={sectionRef}
       className="pt-16 pb-16 sm:pt-20 sm:pb-20 bg-[#F3F5F2] text-fir rounded-t-[40px] sm:rounded-t-[56px] -mt-12 sm:-mt-16 relative z-20 shadow-[0_-15px_40px_rgba(0,0,0,0.06)] overflow-hidden border-t border-fir/10"
     >
-      {/* Subtle Background Glows */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-lfgreen/15 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-mint/20 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
+      {/* Ambient glow removed for mobile performance and Safari glitch prevention */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
