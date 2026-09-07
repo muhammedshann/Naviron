@@ -19,7 +19,7 @@ export default function FloatingWhatsApp() {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50">
+    <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40">
       {open && (
         <div className="mb-3 w-[calc(100vw-40px)] max-w-sm sm:w-96 rounded-3xl bg-white border border-fir/10 p-4 sm:p-5 shadow-2xl">
           <div className="flex items-center justify-between pb-3 border-b border-sage-dark mb-3">

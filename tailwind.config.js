@@ -69,6 +69,12 @@ export default {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
+      zIndex: {
+        60: '60',
+        70: '70',
+        80: '80',
+        90: '90',
+      },
     },
   },
   plugins: [],

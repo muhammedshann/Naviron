@@ -155,7 +155,7 @@ export default function Blog({ onNavigate }) {
                     </div>
                   )}
 
-                  2. Secondary Stacked Articles (Right)
+                  {/* 2. Secondary Stacked Articles (Right) */}
                   <div className="lg:col-span-5 space-y-10">
                     {filteredPosts.slice(1, 3).map((post, idx) => (
                       <div

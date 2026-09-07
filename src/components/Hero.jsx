@@ -96,7 +96,7 @@ export default function Hero({ onNavigate }) {
             transition={{ duration: 0.9, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+            <div className="relative mx-auto max-w-md lg:max-w-none overflow-visible">
               {/* Main Image */}
               <div className="relative rounded-3xl overflow-hidden border border-fir/10 shadow-2xl group">
                 <img
@@ -120,7 +120,7 @@ export default function Hero({ onNavigate }) {
 
               {/* Floating Card */}
               <div
-                className="absolute -bottom-4 left-2 sm:-left-10 w-44 sm:w-56 p-3 sm:p-4 rounded-2xl bg-white border border-fir/10 shadow-xl"
+                className="absolute -bottom-4 left-2 sm:left-2 lg:-left-10 w-44 sm:w-52 lg:w-56 p-3 sm:p-3.5 lg:p-4 rounded-2xl bg-white border border-fir/10 shadow-xl"
                 style={{ animation: 'float 6s ease-in-out infinite' }}
               >
                 <div className="flex items-center gap-2.5 sm:gap-3 mb-2">
@@ -138,7 +138,7 @@ export default function Hero({ onNavigate }) {
               </div>
 
               {/* Top Right Badge */}
-              <div className="absolute -top-3 right-2 sm:-right-8 p-3 sm:p-3.5 rounded-2xl bg-white border border-fir/10 shadow-xl">
+              <div className="absolute -top-3 right-2 sm:right-2 lg:-right-8 p-3 sm:p-3 lg:p-3.5 rounded-2xl bg-white border border-fir/10 shadow-xl">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-lfgreen animate-pulse" />
                   <div>

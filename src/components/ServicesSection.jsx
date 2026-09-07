@@ -48,13 +48,13 @@ export default function ServicesSection({ onNavigate }) {
             return (
               <div
                 key={svc.id}
-                className="sticky shadow-[0_-8px_30px_rgba(0,0,0,0.12)] mb-4 sm:mb-6 last:mb-0 border border-fir/10 rounded-3xl overflow-hidden bg-white transform-gpu will-change-transform"
+                className="lg:sticky shadow-[0_-8px_30px_rgba(0,0,0,0.12)] mb-4 sm:mb-6 last:mb-0 border border-fir/10 rounded-3xl overflow-hidden bg-white transform-gpu will-change-transform"
                 style={{
                   top: `${topOffset}px`,
                   zIndex: 10 + index, // Ensure newer cards stack on top of older ones
                 }}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch min-h-[440px]">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch lg:min-h-[440px]">
                   
                   {/* Content Area */}
                   <div className={`lg:col-span-6 p-6 sm:p-12 lg:p-14 flex flex-col justify-center bg-white relative`}>
