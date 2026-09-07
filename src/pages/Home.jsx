@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
 import StatsSection from '../components/StatsSection';
 import ServicesSection from '../components/ServicesSection';
-
 import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
 import CTABanner from '../components/CTABanner';
@@ -20,7 +19,7 @@ export default function Home({ onNavigate }) {
       <StatsSection />
 
       {/* 3. About Snapshot Section */}
-      <section className="pt-16 pb-16 sm:pt-20 sm:pb-20 bg-white text-fir rounded-t-[40px] sm:rounded-t-[56px] -mt-12 sm:-mt-16 relative z-30 shadow-[0_-15px_40px_rgba(0,0,0,0.06)] overflow-hidden border-t border-fir/10">
+      <section className="py-16 sm:py-24 bg-white text-fir relative z-20 border-t border-b border-fir/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 35 }}
@@ -78,13 +77,13 @@ export default function Home({ onNavigate }) {
       {/* 4. Core Services Showcase */}
       <ServicesSection onNavigate={onNavigate} />
 
-      {/* 6. Why Choose Us */}
+      {/* 5. Why Choose Us */}
       <WhyChooseUs />
 
-      {/* 7. Testimonials Carousel */}
+      {/* 6. Testimonials Carousel */}
       <Testimonials />
 
-      {/* 8. Bottom CTA Banner */}
+      {/* 7. Bottom CTA Banner */}
       <CTABanner onNavigate={onNavigate} />
     </div>
   );

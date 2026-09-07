@@ -5,7 +5,7 @@ import { companyInfo } from '../data/content';
 
 export default function CTABanner({ onNavigate }) {
   return (
-    <section className="pt-12 pb-12 sm:pt-16 sm:pb-16 bg-fir text-white rounded-t-[36px] sm:rounded-t-[48px] -mt-10 sm:-mt-14 relative z-80 shadow-[0_-20px_50px_rgba(0,0,0,0.2)] overflow-hidden border-t border-white/15">
+    <section className="py-16 sm:py-24 bg-fir text-white relative z-10 overflow-hidden border-t border-white/15">
       {/* Ambient glow removed for mobile performance and to prevent Safari rendering glitches */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

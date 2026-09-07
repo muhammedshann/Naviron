@@ -42,8 +42,8 @@ export default function About({ onNavigate }) {
         subtitle="Fit-Out | Civil | MEP | Landscaping | Maintenance — Powered by 20+ years of Ainsnan heritage and modern engineering technologies across Qatar."
       />
 
-      {/* 2. Our Mission Section (Curved Light Section) */}
-      <section className="pt-16 pb-20 sm:pt-20 sm:pb-24 bg-[#F3F5F2] text-fir rounded-t-[40px] sm:rounded-t-[56px] -mt-10 sm:-mt-14 relative z-20 shadow-[0_-15px_40px_rgba(0,0,0,0.06)] border-t border-fir/10 overflow-hidden">
+      {/* 2. Our Mission Section */}
+      <section className="py-16 sm:py-24 bg-[#F3F5F2] text-fir relative z-20 border-t border-b border-fir/5 overflow-hidden">
         {/* Subtle Ambient Glows */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-lfgreen/15 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-mint/20 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
@@ -117,8 +117,8 @@ export default function About({ onNavigate }) {
       {/* 3. Interactive Animated Stats */}
       <StatsSection />
 
-      {/* 4. Our Approach Section (Curved Dark Panel Section) */}
-      <section className="pt-16 pb-20 sm:pt-20 sm:pb-24 bg-fir text-white rounded-t-[40px] sm:rounded-t-[56px] -mt-12 sm:-mt-16 relative z-40 shadow-[0_-15px_40px_rgba(0,0,0,0.2)] overflow-hidden border-t border-white/10">
+      {/* 4. Our Approach Section */}
+      <section className="py-16 sm:py-24 bg-fir text-white relative z-20 overflow-hidden border-t border-white/10">
         {/* Glow Effects */}
         <div className="absolute -top-24 -left-24 w-80 h-80 bg-lfgreen/15 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
         <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-mint/15 rounded-full blur-[140px] transform-gpu backface-visibility-hidden pointer-events-none" />
@@ -184,8 +184,8 @@ export default function About({ onNavigate }) {
         </div>
       </section>
 
-      {/* 5. Our Story Section (Curved Light Section) */}
-      <section className="pt-16 pb-20 sm:pt-20 sm:pb-24 bg-[#F3F5F2] text-fir rounded-t-[40px] sm:rounded-t-[56px] -mt-12 sm:-mt-16 relative z-50 shadow-[0_-15px_40px_rgba(0,0,0,0.06)] border-t border-fir/10 overflow-hidden">
+      {/* 5. Our Story Section */}
+      <section className="py-16 sm:py-24 bg-[#F3F5F2] text-fir relative z-20 border-t border-b border-fir/5 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 35 }}

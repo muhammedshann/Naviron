@@ -15,7 +15,7 @@ const iconMap = {
 
 export default function WhyChooseUs() {
   return (
-    <section className="pt-16 pb-16 sm:pt-20 sm:pb-20 bg-white text-fir rounded-t-[40px] sm:rounded-t-[56px] -mt-12 sm:-mt-16 relative z-60 shadow-[0_-15px_40px_rgba(0,0,0,0.06)] overflow-hidden border-t border-fir/10">
+    <section className="py-16 sm:py-24 bg-white text-fir relative z-10 border-t border-b border-fir/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
