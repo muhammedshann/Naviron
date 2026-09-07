@@ -10,7 +10,7 @@ export default function Contact({ onNavigate }) {
     name: '',
     email: '',
     phone: '',
-    service: 'civil-construction',
+    service: 'fit-out-construction',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -26,7 +26,7 @@ export default function Contact({ onNavigate }) {
         name: '',
         email: '',
         phone: '',
-        service: 'civil-construction',
+        service: 'fit-out-construction',
         message: ''
       });
     }, 1200);
@@ -238,10 +238,10 @@ export default function Contact({ onNavigate }) {
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                           className="w-full p-3.5 rounded-2xl bg-white border border-fir/10 text-fir focus:outline-none focus:border-lfgreen-dark text-sm transition-colors"
                         >
-                          <option value="civil-construction">Civil Construction</option>
-                          <option value="infrastructure-maintenance">Infrastructure Maintenance</option>
-                          <option value="project-support">Project Support Services</option>
-                          <option value="specialized-trading">Specialized Trading Solutions</option>
+                          <option value="fit-out-construction">Fit-Out & Construction Division</option>
+                          <option value="landscaping-irrigation">Landscaping & Irrigation Division</option>
+                          <option value="mep-division">MEP Division (Mechanical, Electrical & Plumbing)</option>
+                          <option value="maintenance-services">Maintenance Services (Preventive & Corrective)</option>
                           <option value="general-inquiry">General Inquiry / Strategic Partner</option>
                         </select>
                       </div>

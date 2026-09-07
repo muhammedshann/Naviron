@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { services } from '../data/content';
-import { Building2, Wrench, ShieldCheck, Truck, ArrowRight, CheckCircle, MessageSquare } from 'lucide-react';
+import { Building2, Trees, Zap, Wrench, ArrowRight, CheckCircle, MessageSquare } from 'lucide-react';
 
 const iconMap = {
   Building2,
-  Wrench,
-  ShieldCheck,
-  Truck
+  Trees,
+  Zap,
+  Wrench
 };
 
 export default function ServicesSection({ onNavigate }) {
@@ -25,14 +25,14 @@ export default function ServicesSection({ onNavigate }) {
           className="text-center max-w-3xl mx-auto mb-10"
         >
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-white border border-fir/10 text-xs font-semibold text-fir/70 mb-4 shadow-sm">
-            Core Engineering & Trading
+            Integrated Service Divisions
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-fir mb-6 tracking-tight">
-            Comprehensive Offerings Tailored for{' '}
+            Our Core Service Divisions in{' '}
             <span className="text-3d-sm">Qatar</span>
           </h2>
           <p className="text-fir/60 text-base sm:text-lg leading-relaxed font-normal">
-            Delivering high-specification civil engineering, facility preservation, management support, and global procurement to drive your projects forward.
+            Specialized execution across Fit-Out &amp; Construction, Landscaping &amp; Automatic Irrigation, MEP Engineering, and Preventive &amp; Corrective Maintenance.
           </p>
         </motion.div>
 

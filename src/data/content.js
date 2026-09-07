@@ -1,7 +1,8 @@
 export const companyInfo = {
   name: "Naviron",
-  tagline: "Transforming Construction & Trading in Qatar",
-  subtagline: "Where modern technology meets reliable service for efficient project solutions tailored to your needs.",
+  tagline: "Integrated Contracting & Facility Solutions",
+  subtagline: "Fit-Out | Civil | MEP | Landscaping | Maintenance",
+  badgeText: "Fit-Out & Construction • Landscaping & Irrigation • MEP & Maintenance",
   sisterCompany: "A Sister Company of Ainsnan Trading & Contracting",
   crNumber: "237130",
   phones: [
@@ -11,213 +12,300 @@ export const companyInfo = {
   email: "info@naviron.tech",
   address: "Street No: 955, Central Market, Abu Hamour, Building No: 191, 1st Floor, Door No: 12, PO Box: 40868, Qatar",
   experienceYears: "20+",
-  mission: "At Naviron, our mission is to deliver innovative, efficient solutions that empower businesses and households in Qatar. We strive for excellence in service quality, sustainability, and customer satisfaction, building on our legacy while embracing modern technologies to meet the evolving needs of our community.",
-  approach: "Naviron’s approach centers on collaboration, integrity, and forward-thinking solutions. We engage closely with clients to understand their unique challenges and provide tailored support. By integrating the latest technologies and industry best practices, we ensure efficient, reliable project outcomes that stand the test of time and meet the highest standards.",
-  story: "Founded as a dynamic extension of Ainsnan Trading & Contracting, Naviron reflects over 20 years of industry expertise. We honor our parent company's reputation while embracing innovation to address the changing landscape of Qatari infrastructure, civil construction, and specialized trading, ensuring we remain a trusted partner for our clients."
+  mission: "At Naviron, our mission is to provide integrated contracting and facility solutions across Qatar. We deliver turnkey fit-out, civil works, landscaping & automatic irrigation, MEP installations, and preventive & corrective maintenance based on safety, integrity, innovation, and client satisfaction.",
+  approach: "Our operational philosophy is built on seven core pillars: Safety, Integrity, Professionalism, Innovation, Customer Satisfaction, Timely Delivery, and Sustainability. We collaborate closely with our clients to deliver high-quality, efficient, and durable project outcomes across all sectors.",
+  story: "Founded as a dynamic extension of Ainsnan Trading & Contracting, Naviron carries over 20 years of industry legacy in Qatar. We combine parent company expertise with modern engineering technologies to provide seamless fit-out, civil, MEP, landscaping, and maintenance solutions.",
+  coreValues: [
+    { id: "safety", name: "Safety", desc: "Uncompromising health and safety standards across all site fit-outs and maintenance operations." },
+    { id: "integrity", name: "Integrity", desc: "Transparent dealings, ethical commercial standards, and building long-term trust." },
+    { id: "professionalism", name: "Professionalism", desc: "Certified engineering practices adhering to strict Qatari building codes and regulations." },
+    { id: "innovation", name: "Innovation", desc: "Modern architectural fit-outs, automatic irrigation systems, and smart MEP solutions." },
+    { id: "satisfaction", name: "Customer Satisfaction", desc: "Dedicated to exceeding client expectations with custom-tailored project delivery." },
+    { id: "delivery", name: "Timely Delivery", desc: "Strict adherence to project timelines, milestone management, and budget controls." },
+    { id: "sustainability", name: "Sustainability", desc: "Eco-friendly landscaping, water-conserving drip irrigation, and energy-efficient systems." }
+  ],
+  quickServicesTicker: [
+    "Civil Works", "Tile & Marble", "Interlock Paving", "Epoxy Flooring", "Gypsum Partitions", 
+    "Painting Works", "Carpentry & Joinery", "Aluminium & Glass", "Movable Partitions", "Automatic Sliding Doors",
+    "Hardscape & Softscape", "Automatic Irrigation", "MEP Installation", "Testing & Commissioning", 
+    "Preventive Maintenance", "Corrective Maintenance", "24/7 Rapid Emergency Support"
+  ]
 };
 
 export const stats = [
-  { id: "satisfaction", value: 92, suffix: "%", label: "Customer Satisfaction", desc: "Proven track record of client delight across Qatar" },
-  { id: "clients", value: 150, suffix: "+", label: "Happy Clients", desc: "Trusted by government entities, developers & firms" },
-  { id: "testimonials", value: 13, suffix: "K", label: "Testimonials", desc: "Verified positive community endorsements" },
-  { id: "experience", value: 20, suffix: "+ Years", label: "Industry Legacy", desc: "Two decades of construction excellence with Ainsnan" }
+  { id: "divisions", value: 3, suffix: " Major", label: "Integrated Divisions", desc: "Fit-Out & Construction, Landscaping & Irrigation, MEP" },
+  { id: "satisfaction", value: 100, suffix: "%", label: "Quality Commitment", desc: "Safety, integrity, and timely delivery across Qatar" },
+  { id: "emergency", value: 24, suffix: "/7", label: "Maintenance Desk", desc: "Rapid-response preventive & corrective call-out support" },
+  { id: "legacy", value: 20, suffix: "+ Years", label: "Ainsnan Heritage", desc: "Two decades of contracting excellence & client trust" }
 ];
 
 export const services = [
   {
-    id: "civil-construction",
-    title: "Civil Construction",
-    subtitle: "Precision Structural Engineering & Commercial Architecture",
-    description: "Naviron specializes in civil construction projects, delivering high-quality buildings and infrastructures that meet rigorous safety and quality standards, ensuring durability and functionality for diverse client needs.",
+    id: "fit-out-construction",
+    title: "Fit-Out & Construction Division",
+    subtitle: "Complete Fit-Out, Civil Works, Flooring, Gypsum & Joinery",
+    description: "End-to-end interior fit-outs, structural civil works, specialty epoxy flooring, decorative gypsum ceilings, custom joinery, aluminium & glass partitions, and automatic sliding doors.",
     details: [
-      "Turnkey commercial and residential high-rise building solutions",
-      "Structural steel framing, reinforced concrete works & geotechnical engineering",
-      "Rigorous adherence to Qatari construction codes & safety compliance",
-      "LEED & sustainable architectural construction methodologies"
+      "Turnkey Commercial, Residential, Office, Retail & Hospitality Fit-Outs",
+      "Structural Civil Works: Block work, plastering, screeding & concrete works",
+      "Tile, Marble, Granite, Stone & External Interlock Paving",
+      "Industrial & Commercial Epoxy Flooring with protective coatings",
+      "Gypsum partitions, false ceilings, custom carpentry & automatic doors"
+    ],
+    subDivisions: [
+      {
+        title: "Complete Fit-Out Works",
+        items: ["Interior fit-out works", "Commercial fit-out", "Residential fit-out", "Office fit-out", "Retail fit-out", "Hospitality fit-out", "Renovation and refurbishment"]
+      },
+      {
+        title: "Civil Works",
+        items: ["Block work", "Plastering", "Screeding", "Concrete works", "Repair and renovation", "Masonry works", "External civil works"]
+      },
+      {
+        title: "Tile, Marble & Interlock Works",
+        items: ["Floor and wall tiling", "Marble installation", "Granite works", "Stone installation", "Interlock paving", "External paving", "Kerbstone installation"]
+      },
+      {
+        title: "Epoxy Flooring",
+        items: ["Industrial epoxy flooring", "Commercial epoxy flooring", "Self-leveling flooring", "Heavy-duty flooring", "Protective coatings", "Floor repair and preparation"]
+      },
+      {
+        title: "Gypsum Works",
+        items: ["Gypsum partitions", "False ceilings", "Decorative ceilings", "Bulkheads", "Feature walls", "Access panels", "Gypsum detailing"]
+      },
+      {
+        title: "Painting Works",
+        items: ["Interior painting", "Exterior painting", "Decorative painting", "Texture coating", "Protective coatings", "Repainting and refurbishment"]
+      },
+      {
+        title: "Carpentry & Joinery",
+        items: ["Custom furniture", "Doors and frames", "Cabinets", "Wall paneling", "Decorative woodwork", "Office furniture", "Joinery works"]
+      },
+      {
+        title: "Partitions & Automatic Doors",
+        items: ["Movable wall partitions", "Aluminium & glass partitions", "Frameless glass partitions", "Office partitions", "Sliding partitions", "Automatic sliding doors", "Automatic entrance systems"]
+      }
     ],
     image: "/assets/images/pexels-photo-35296423.jpeg",
     bannerImage: "/assets/images/pexels-photo-33670026.jpeg",
     icon: "Building2",
-    badge: "Core Engineering"
+    badge: "Division 01"
   },
   {
-    id: "infrastructure-maintenance",
-    title: "Infrastructure Maintenance",
-    subtitle: "Facility Health, Preventative Upkeep & Asset Longevity",
-    description: "Our infrastructure maintenance services are tailored to prolong the lifespan and efficiency of essential facilities, combining expert assessments with state-of-the-art technologies to ensure reliable performance and safety.",
+    id: "landscaping-irrigation",
+    title: "Landscaping & Irrigation Division",
+    subtitle: "Hardscape, Softscape, Smart Irrigation & Landscape Care",
+    description: "Design, installation, and care for softscaping and hardscaping projects, outdoor features, automated drip and sprinkler irrigation networks, and seasonal landscape maintenance.",
     details: [
-      "Continuous facility health diagnostics and structural integrity inspections",
-      "Preventative HVAC, MEP, and foundational maintenance schedules",
-      "24/7 rapid emergency repair deployment across Qatar",
-      "Asset lifecycle optimization and energy-efficiency retrofits"
+      "Softscaping & Hardscaping: Turf, planting, trees, shrubs & gardens",
+      "Automatic Irrigation: Drip & sprinkler systems with smart controllers",
+      "Pumps, irrigation networks, testing & commissioning",
+      "Comprehensive landscape maintenance, pruning, grass & soil fertilization"
+    ],
+    subDivisions: [
+      {
+        title: "Landscaping Works",
+        items: ["Soft landscaping", "Hard landscaping", "Planting", "Turf installation", "Trees and shrubs", "Decorative landscaping", "Outdoor features", "Garden development"]
+      },
+      {
+        title: "Automatic Irrigation",
+        items: ["Irrigation system design", "Drip irrigation", "Sprinkler systems", "Automatic irrigation controllers", "Pumps and irrigation networks", "Irrigation installation", "Testing and commissioning"]
+      },
+      {
+        title: "Landscape Maintenance",
+        items: ["Garden maintenance", "Plant care", "Grass maintenance", "Pruning", "Fertilization", "Irrigation maintenance", "Seasonal maintenance"]
+      }
     ],
     image: "/assets/images/pexels-photo-9471710.jpeg",
     bannerImage: "/assets/images/pexels-photo-19612359.jpeg",
-    icon: "Wrench",
-    badge: "Facility Management"
+    icon: "Trees",
+    badge: "Division 02"
   },
   {
-    id: "project-support",
-    title: "Project Support Services",
-    subtitle: "Agile Project Coordination, Logistics & Field Management",
-    description: "We provide comprehensive project support services, including planning, management, and execution, ensuring that every aspect of your project is handled with precision, efficiency, and dedication to excellence.",
+    id: "mep-division",
+    title: "MEP Division",
+    subtitle: "Mechanical, Electrical & Plumbing Installation & Testing",
+    description: "Complete MEP engineering services including low voltage power distribution, lighting systems, cable containment, water supply, drainage networks, and testing & commissioning.",
     details: [
-      "End-to-end master planning, scheduling, and milestone execution",
-      "Supply chain logistics and on-site material management",
-      "Dedicated QA/QC field engineering supervision",
-      "Subcontractor coordination, risk mitigation & regulatory licensing"
+      "LV Electrical Works: Power distribution, DB installation & cabling",
+      "Lighting & Emergency Systems: Energy-efficient fixtures & controls",
+      "Plumbing Works: Water supply, drainage networks, pumps & tanks",
+      "Comprehensive MEP Testing, Commissioning & Safety Compliance"
+    ],
+    subDivisions: [
+      {
+        title: "Mechanical, Electrical & Plumbing",
+        items: ["MEP Installation", "Testing & Commissioning", "Integrated Systems Execution", "Quality Control Inspections"]
+      },
+      {
+        title: "Electrical Works",
+        items: ["LV electrical works", "Power distribution", "Lighting systems", "Emergency lighting", "DB installation", "Cable containment", "Wiring and cabling", "Earthing systems", "Testing and commissioning"]
+      },
+      {
+        title: "Plumbing Works",
+        items: ["Water supply", "Drainage systems", "Sanitary installations", "Piping works", "Pumps", "Water tanks", "Fixtures and fittings", "Testing and commissioning"]
+      }
     ],
     image: "/assets/images/pexels-photo-5987842.jpeg",
     bannerImage: "/assets/images/pexels-photo-35296423.jpeg",
-    icon: "ShieldCheck",
-    badge: "Execution Support"
+    icon: "Zap",
+    badge: "Division 03"
   },
   {
-    id: "specialized-trading",
-    title: "Specialized Trading Solutions",
-    subtitle: "High-Grade Building Materials & Heavy Machinery Distribution",
-    description: "Naviron offers specialized trading solutions that encompass a variety of high-quality materials and equipment, ensuring our customers have access to the best products tailored for their unique project requirements.",
+    id: "maintenance-services",
+    title: "Maintenance Services",
+    subtitle: "Preventive, Corrective & 24/7 Rapid Emergency Support",
+    description: "Dedicated facility maintenance programs for civil structures, MEP networks, landscape ecosystems, and 24/7 rapid emergency call-out repairs.",
     details: [
-      "Certified raw materials: Steel, aggregates, composite polymers, and glass",
-      "Industrial machinery, safety gear, and precision tooling supply",
-      "Direct international manufacturer procurement with swift delivery",
-      "Customized bulk trade orders with full compliance certification"
+      "Building Maintenance: Civil, painting, tile, marble, gypsum & door repairs",
+      "MEP Maintenance: Electrical, plumbing, mechanical & equipment upkeep",
+      "Landscape Maintenance: Irrigation care, plant care & seasonal pruning",
+      "Emergency Maintenance: Rapid-response repairs & breakdown call-out support"
+    ],
+    subDivisions: [
+      {
+        title: "Building Maintenance",
+        items: ["Civil maintenance", "Painting", "Tile and marble repairs", "Gypsum repairs", "Carpentry", "Doors and partitions"]
+      },
+      {
+        title: "MEP Maintenance",
+        items: ["Electrical maintenance", "Plumbing maintenance", "Mechanical maintenance", "Equipment maintenance"]
+      },
+      {
+        title: "Landscape Maintenance",
+        items: ["Irrigation maintenance", "Plant maintenance", "Grass and garden care", "Pruning and fertilization"]
+      },
+      {
+        title: "Emergency Maintenance",
+        items: ["Rapid-response repairs", "Breakdown support", "Corrective maintenance", "Call-out services"]
+      }
     ],
     image: "/assets/images/pexels-photo-10546989.jpeg",
     bannerImage: "/assets/images/pexels-photo-9471710.jpeg",
-    icon: "Truck",
-    badge: "Procurement & Trade"
+    icon: "Wrench",
+    badge: "Division 04"
   }
 ];
 
 export const valuePillars = [
   {
-    icon: "Award",
-    title: "Expertise You Can Depend On",
-    description: "With a legacy of over two decades, our deep industry knowledge ensures that we deliver exceptional results tailored to your unique requirements."
+    icon: "ShieldCheck",
+    title: "Safety First",
+    description: "Strict health and safety protocols across every site, fit-out, and maintenance operation in Qatar."
   },
   {
-    icon: "Zap",
-    title: "Innovative & Modern Solutions",
-    description: "We utilize the latest technologies to provide cutting-edge solutions that enhance efficiency and sustainability across all our projects."
+    icon: "Award",
+    title: "Integrity",
+    description: "Ethical commercial standards, transparent contracting terms, and building lasting client partnerships."
   },
   {
     icon: "CheckCircle",
-    title: "Commitment to Quality",
-    description: "Quality workmanship is the cornerstone of our operations, ensuring that we uphold the highest standards in every project we undertake."
+    title: "Professionalism",
+    description: "Qualified engineers and tradespeople delivering precision craftsmanship and Qatari code compliance."
+  },
+  {
+    icon: "Zap",
+    title: "Innovation",
+    description: "Deploying modern construction techniques, automatic sliding entrance systems, and smart irrigation networks."
   },
   {
     icon: "Users",
-    title: "Customer Satisfaction First",
-    description: "We prioritize understanding your needs, ensuring our solutions consistently meet and exceed your expectations for a seamless experience."
+    title: "Customer Satisfaction",
+    description: "Client-focused service delivery ensuring every project milestone exceeds expectations."
+  },
+  {
+    icon: "Clock",
+    title: "Timely Delivery",
+    description: "Strict schedule discipline and resource optimization for on-time project handovers."
+  },
+  {
+    icon: "Leaf",
+    title: "Sustainability",
+    description: "Resource-efficient MEP engineering, eco-friendly softscaping, and smart water management."
   }
 ];
 
 export const testimonials = [
   {
     id: 1,
-    name: "Sarah Al-Mansoori",
-    role: "Project Executive",
+    name: "Jassim Al-Malki",
+    role: "Commercial Property Manager",
     location: "Doha, Qatar",
     avatar: "/assets/images/testimonial-skip-01.jpg",
-    quote: "Naviron transformed our project with their expertise and innovative solutions. Their team was professional, efficient, and truly delivered on their promises. Highly recommend!",
+    quote: "Naviron executed our corporate office fit-out and glass partitions flawlessly. Their attention to detail in joinery and gypsum works was outstanding.",
     rating: 5,
-    projectScope: "Civil Engineering & Commercial Infrastructure"
+    projectScope: "Commercial Fit-Out & Glass Partitions"
   },
   {
     id: 2,
-    name: "Layla Ahmed",
-    role: "Operations Director",
-    location: "Qatar",
+    name: "Mariam Al-Subaey",
+    role: "Landscape & Estate Supervisor",
+    location: "Lusail, Qatar",
     avatar: "/assets/images/testimonial-skip-02.jpg",
-    quote: "The quality of service we received from Naviron was exceptional. They were committed to our satisfaction and made the entire process seamless. We couldn’t be happier!",
+    quote: "The automatic irrigation design and softscaping by Naviron transformed our facility grounds. Their maintenance team keeps everything lush year-round.",
     rating: 5,
-    projectScope: "Turnkey Maintenance & Facilities Management"
+    projectScope: "Landscaping & Automatic Irrigation"
   },
   {
     id: 3,
-    name: "Mohammed Al-Kuwari",
-    role: "Infrastructure Director",
-    location: "Doha, Qatar",
+    name: "Tariq Al-Mansoor",
+    role: "Facilities Director",
+    location: "West Bay, Doha",
     avatar: "/assets/images/testimonial-skip-01.jpg",
-    quote: "Naviron delivered our maintenance project ahead of schedule. Their attention to detail and proactive communication made the entire process seamless.",
+    quote: "Naviron's MEP maintenance and emergency call-out service give us complete peace of mind. Their response time and technical expertise are top tier.",
     rating: 5,
-    projectScope: "Infrastructure Preservation"
+    projectScope: "MEP Preventive & Emergency Maintenance"
   },
   {
     id: 4,
-    name: "Fatima Al-Thani",
-    role: "Procurement Manager",
+    name: "Fatima Al-Kuwari",
+    role: "Retail Group Project Lead",
     location: "Qatar",
     avatar: "/assets/images/testimonial-skip-02.jpg",
-    quote: "The specialized trading solutions from Naviron gave us access to certified materials that exceeded international quality standards. A reliable partner for any scale.",
+    quote: "From heavy-duty epoxy flooring to automatic sliding door installations, Naviron delivered our multi-site retail fit-out ahead of schedule.",
     rating: 5,
-    projectScope: "Certified Material Procurement"
-  },
-  {
-    id: 5,
-    name: "Ahmed Hassan",
-    role: "Site Engineer",
-    location: "Al Wakra, Qatar",
-    avatar: "/assets/images/testimonial-skip-01.jpg",
-    quote: "Working with Naviron on our commercial tower project was an outstanding experience. Their engineering team brought precision and innovation to every phase.",
-    rating: 5,
-    projectScope: "Structural Concrete & Steel"
-  },
-  {
-    id: 6,
-    name: "Noura Al-Sulaiti",
-    role: "Facilities Director",
-    location: "Lusail, Qatar",
-    avatar: "/assets/images/testimonial-skip-02.jpg",
-    quote: "From initial consultation to final handover, Naviron demonstrated professionalism that set them apart. Their sustainable approach aligned perfectly with our vision.",
-    rating: 5,
-    projectScope: "Sustainable Architectural Solutions"
+    projectScope: "Retail Fit-Out & Epoxy Flooring"
   }
 ];
 
 export const blogPosts = [
   {
     id: "post-1",
-    title: "A Grateful Reflection on Our Journey at Torch Tower",
-    category: "Project Spotlight",
-    date: "June 21, 2026",
-    author: "Naviron Engineering Team",
-    image: "/assets/images/pexels-photo-1662310.jpeg",
-    excerpt: "Being part of a development of such scale and significance allowed our team to contribute alongside talented professionals, industry leaders, and dedicated project stakeholders...",
+    title: "Key Considerations for Commercial Fit-Out & Glass Partitions in Qatar",
+    category: "Fit-Out & Construction",
+    date: "August 12, 2026",
+    author: "Naviron Fit-Out Desk",
+    image: "/assets/images/pexels-photo-35296423.jpeg",
+    excerpt: "Modern commercial spaces require seamless interior fit-out execution, acoustics, automatic sliding doors, and premium joinery works...",
     content: [
-      "Being part of a development of such scale and significance allowed our team to contribute alongside talented professionals, industry leaders, and dedicated project stakeholders. The Torch Tower project challenged us to elevate our standards, strengthen our technical capabilities, and deliver quality work under demanding timelines and expectations.",
-      "The exposure we gained throughout this journey has been invaluable. It not only enhanced our operational expertise but also expanded our understanding of large-scale project coordination, innovation, and collaboration. Every milestone achieved on the project helped us grow as a team and reinforced our commitment to delivering reliable and professional services.",
-      "We extend our sincere appreciation to the project owners, main contractors, consultants, and every individual who worked with us during this journey. Their trust, guidance, and cooperation created an environment where learning and excellence could thrive.",
-      "Most importantly, we thank our dedicated Team Naviron members whose hard work, professionalism, and perseverance made our contribution possible. Their commitment reflects the values that define our organization.",
-      "As we move forward, the lessons learned and relationships built during the Torch Tower project will continue to inspire us. We are proud to have been part of this landmark development and grateful for the exposure and experience it brought to Team Naviron.",
-      "Thank you for being part of our journey. We look forward to building many more successful partnerships and contributing to future projects with the same passion and dedication."
+      "Executing a high-standard interior fit-out requires careful coordination between civil modifications, gypsum partitions, decorative ceilings, and MEP integration.",
+      "At Naviron, our Fit-Out & Construction division manages every detail—from block work and plastering to custom joinery, frameless glass partitions, and automatic entrance systems."
     ]
   },
   {
     id: "post-2",
-    title: "Advancing HVAC & Preventive Upkeep in Qatari Climate Conditions",
-    category: "Insights & Strategy",
-    date: "August 14, 2026",
-    author: "Naviron Engineering Desk",
-    image: "/assets/images/pexels-photo-10743330.jpeg",
-    excerpt: "Maintaining high-rise HVAC systems and structural Integrity in coastal and desert climates requires proactive diagnostics and specialized anti-corrosion materials...",
+    title: "Maximizing Water Efficiency with Automatic Irrigation Systems",
+    category: "Landscaping & Irrigation",
+    date: "August 24, 2026",
+    author: "Naviron Landscaping Desk",
+    image: "/assets/images/pexels-photo-9471710.jpeg",
+    excerpt: "Automated drip and sprinkler networks combined with smart controllers ensure thriving landscapes while optimizing water consumption...",
     content: [
-      "Operating complex civil facilities in Qatar presents distinct environmental considerations. High ambient summer temperatures, ambient dust, and coastal humidity require rigorous preventive maintenance schedules to safeguard HVAC equipment and structural concrete integrity.",
-      "At Naviron, our facility management protocols integrate continuous sensor diagnostics with regular preventative inspections. By treating potential equipment stress points before failures occur, commercial assets maintain uninterrupted operational efficiency and reduced lifecycle expenses."
+      "Developing sustainable softscapes in Qatari climate conditions hinges on intelligent automatic irrigation design. Smart controllers and drip networks deliver exact water volumes directly to roots.",
+      "Naviron offers complete landscape design, turf installation, tree planting, and routine seasonal maintenance to ensure lasting beauty."
     ]
   },
   {
     id: "post-3",
-    title: "ISO-Certified Supply Chains: Mitigating Risk in Qatari Procurement",
-    category: "Industry Standards",
-    date: "August 28, 2026",
-    author: "Naviron Trade Division",
-    image: "/assets/images/pexels-photo-34793640.jpeg",
-    excerpt: "Streamlining international material sourcing with customs compliance ensures that critical steel, MEP components, and aggregates reach active sites without delay...",
+    title: "The Importance of Preventive MEP & Facility Maintenance",
+    category: "MEP & Maintenance",
+    date: "September 02, 2026",
+    author: "Naviron Maintenance Desk",
+    image: "/assets/images/pexels-photo-5987842.jpeg",
+    excerpt: "Regular electrical, plumbing, and building upkeep prevents costly downtime and prolongs asset lifespan across commercial facilities...",
     content: [
-      "Timely project completion hinges on robust supply chain management. Naviron's specialized trading division directly partners with international manufacturers to source ISO-certified steel, heavy machinery, and precision tooling tailored to Qatari standards.",
-      "By managing customs logistics and quality verification prior to site arrival, we eliminate bottleneck delays and ensure full compliance with Qatar National Vision 2030 building guidelines."
+      "Preventive maintenance schedules safeguard LV electrical networks, water pumps, drainage systems, and structural finishes before minor issues escalate.",
+      "Naviron provides tailored preventive packages and 24/7 rapid-response emergency breakdown support throughout Qatar."
     ]
   }
 ];

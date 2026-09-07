@@ -34,10 +34,10 @@ export default function Home({ onNavigate }) {
                 About Naviron
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-fir mb-6 tracking-tight">
-                Dynamic Solutions for <span className="text-3d-sm">Qatari</span> Businesses
+                Integrated Contracting &amp; <span className="text-3d-sm">Facility Solutions</span>
               </h2>
               <p className="text-base sm:text-lg text-fir/60 leading-relaxed mb-8 font-normal">
-                With over 20 years of expertise, Naviron emphasizes quality, integrity, and innovative approaches, delivering sustainable solutions that meet the evolving needs of our clients in construction and trading.
+                {companyInfo.mission}
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a

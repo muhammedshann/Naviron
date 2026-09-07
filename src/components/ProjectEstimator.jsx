@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, MessageSquare, ArrowRight, Check, Sparkles, Building, Clock, Layers, Wrench, ShieldCheck, Truck, CheckCircle2 } from 'lucide-react';
+import { Calculator, MessageSquare, ArrowRight, Check, Sparkles, Building, Clock, Layers, Wrench, ShieldCheck, Truck, CheckCircle2, Trees, Zap } from 'lucide-react';
 import { companyInfo } from '../data/content';
 
 export default function ProjectEstimator() {
-  const [selectedService, setSelectedService] = useState('civil-construction');
+  const [selectedService, setSelectedService] = useState('fit-out-construction');
   const [projectScale, setProjectScale] = useState('commercial');
   const [timeline, setTimeline] = useState('standard');
 
   const serviceOptions = [
-    { id: 'civil-construction', name: 'Civil Construction', icon: Building, desc: 'Structural engineering' },
-    { id: 'infrastructure-maintenance', name: 'Facility Upkeep', icon: Wrench, desc: 'HVAC & preservation' },
-    { id: 'project-support', name: 'Project Support', icon: ShieldCheck, desc: 'QC site management' },
-    { id: 'specialized-trading', name: 'Specialized Trading', icon: Truck, desc: 'ISO certified materials' },
+    { id: 'fit-out-construction', name: 'Fit-Out & Construction', icon: Building, desc: 'Civil, Gypsum, Flooring & Joinery' },
+    { id: 'landscaping-irrigation', name: 'Landscaping & Irrigation', icon: Trees, desc: 'Hardscape, Softscape & Smart Irrigation' },
+    { id: 'mep-division', name: 'MEP Division', icon: Zap, desc: 'LV Electrical & Plumbing Installation' },
+    { id: 'maintenance-services', name: 'Maintenance Services', icon: Wrench, desc: 'Preventive, Corrective & 24/7 Emergency' },
   ];
 
   const scaleOptions = [

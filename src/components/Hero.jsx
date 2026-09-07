@@ -36,29 +36,33 @@ export default function Hero({ onNavigate }) {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-fir/10 text-xs font-semibold text-fir/70 mb-6 shadow-sm"
             >
               <Sparkles className="w-3.5 h-3.5 text-lfgreen-dark" />
-              <span>Innovative Solutions in Qatar</span>
+              <span>{companyInfo.name} Qatar</span>
               <span className="w-1.5 h-1.5 rounded-full bg-lfgreen" />
               <span className="text-fir/40 font-medium">20+ Years Legacy</span>
             </motion.div>
 
             {/* Headline with 3D text */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.85rem] font-display font-extrabold text-fir tracking-tight leading-[1.1] mb-6">
-              Transforming{' '}
-              <span className="text-3d inline-block">Construction</span> &{' '}
+            <h1 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-display font-extrabold text-fir tracking-tight leading-[1.15] mb-6">
+              Integrated{' '}
+              <span className="text-3d inline-block">Contracting</span> &{' '}
               <span className="relative inline-block">
-                <span className="relative z-10">Trading</span>
+                <span className="relative z-10">Facility Solutions</span>
                 <span className="absolute bottom-1.5 left-0 right-0 h-3.5 bg-lfgreen/40 -z-0 rounded-sm" />
-              </span>{' '}
-              in Qatar
+              </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-fir/60 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8 font-normal">
-              Where modern technology meets reliable service for efficient project solutions tailored to your unique requirements.
-            </p>
+            <div className="mb-6">
+              <span className="inline-block px-3.5 py-1.5 rounded-xl bg-lfgreen/15 text-lfgreen-dark text-xs font-extrabold uppercase tracking-wide border border-lfgreen/30 mb-3">
+                Fit-Out | Civil | MEP | Landscaping | Maintenance
+              </span>
+              <p className="text-base sm:text-lg text-fir/60 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                {companyInfo.mission}
+              </p>
+            </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8">
               <a
                 href={companyInfo.phones[0].whatsappHref}
                 target="_blank"
@@ -69,14 +73,14 @@ export default function Hero({ onNavigate }) {
                 <span>Connect via WhatsApp</span>
               </a>
               <button onClick={() => onNavigate('services')} className="btn-outline">
-                <span>Explore Services</span>
+                <span>Explore Divisions</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
 
             {/* Trust Metrics */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-6 border-t border-fir/10 text-xs text-fir/50">
-              {['CR Certified (237130)', 'Civil & Infrastructure', 'Material Sourcing'].map((item) => (
+              {['Fit-Out & Civil', 'Landscaping & Irrigation', 'MEP & Maintenance'].map((item) => (
                 <div key={item} className="flex items-center gap-1.5 font-medium">
                   <CheckCircle2 className="w-4 h-4 text-lfgreen-dark shrink-0" />
                   <span>{item}</span>
@@ -97,15 +101,15 @@ export default function Hero({ onNavigate }) {
               <div className="relative rounded-3xl overflow-hidden border border-fir/10 shadow-2xl group">
                 <img
                   src="/assets/images/pexels-photo-33670026.jpeg"
-                  alt="Modern Construction Doha Qatar"
+                  alt="Naviron Integrated Solutions Qatar"
                   className="w-full h-[320px] sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-fir/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 p-3.5 sm:p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/50 shadow-lg">
                   <div className="flex items-center justify-between">
                     <div>
-                      <span className="text-[10px] sm:text-[11px] font-bold text-lfgreen-dark uppercase tracking-wider">Featured Project</span>
-                      <h4 className="text-fir font-bold text-xs sm:text-sm">Civic & Commercial High-Rises</h4>
+                      <span className="text-[10px] sm:text-[11px] font-bold text-lfgreen-dark uppercase tracking-wider">Integrated Contracting</span>
+                      <h4 className="text-fir font-bold text-xs sm:text-sm">Fit-Out, MEP &amp; Landscaping</h4>
                     </div>
                     <span className="px-2.5 py-1 bg-lfgreen text-fir rounded-full text-[11px] sm:text-xs font-semibold">
                       Qatar 2026
@@ -121,7 +125,7 @@ export default function Hero({ onNavigate }) {
               >
                 <div className="flex items-center gap-2.5 sm:gap-3 mb-2">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-sage border border-fir/10 flex items-center justify-center text-fir text-xs sm:text-sm font-bold">
-                    A
+                    N
                   </div>
                   <div>
                     <span className="text-xs font-bold text-fir block leading-tight">Ainsnan Partner</span>
@@ -129,7 +133,7 @@ export default function Hero({ onNavigate }) {
                   </div>
                 </div>
                 <div className="w-full bg-sage h-1.5 rounded-full overflow-hidden">
-                  <div className="bg-lfgreen h-full w-[92%] rounded-full" />
+                  <div className="bg-lfgreen h-full w-[95%] rounded-full" />
                 </div>
               </div>
 
@@ -138,8 +142,8 @@ export default function Hero({ onNavigate }) {
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-lfgreen animate-pulse" />
                   <div>
-                    <span className="text-xs font-extrabold text-fir block leading-tight">92% Satisfaction</span>
-                    <span className="text-[10px] text-fir/40">Across Qatar Projects</span>
+                    <span className="text-xs font-extrabold text-fir block leading-tight">100% Quality</span>
+                    <span className="text-[10px] text-fir/40">Safety &amp; Integrity</span>
                   </div>
                 </div>
               </div>

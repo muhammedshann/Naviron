@@ -22,7 +22,7 @@ export default function Footer({ onNavigate }) {
           {/* Col 1: Brand & Tagline with CTAs */}
           <div className="lg:col-span-4">
             <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white leading-tight mb-6">
-              Transforming Construction & Trading
+              Integrated Contracting &amp; Facility Solutions
             </h3>
 
             <div className="flex flex-wrap items-center gap-3 mb-6">

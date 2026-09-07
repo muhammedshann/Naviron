@@ -1,13 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { valuePillars } from '../data/content';
-import { Award, Zap, CheckCircle2, HeartHandshake } from 'lucide-react';
+import { ShieldCheck, Award, CheckCircle2, Zap, Users, Clock, Leaf } from 'lucide-react';
 
 const iconMap = {
+  ShieldCheck,
   Award,
-  Zap,
   CheckCircle: CheckCircle2,
-  Users: HeartHandshake
+  Zap,
+  Users,
+  Clock,
+  Leaf
 };
 
 export default function WhyChooseUs() {
@@ -21,54 +24,53 @@ export default function WhyChooseUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="text-center max-w-3xl mx-auto mb-10"
+          className="text-center max-w-3xl mx-auto mb-12"
         >
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#F3F5F2] border border-fir/10 text-xs font-semibold text-fir/70 mb-4 shadow-sm">
-            The Naviron Advantage
+            Our Core Values
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-fir mb-6 tracking-tight">
-            Why Choose Naviron as Your{' '}
-            <span className="text-3d-sm">Strategic Partner?</span>
+            Guiding Principles of <span className="text-3d-sm">Naviron</span>
           </h2>
           <p className="text-fir/60 text-base sm:text-lg leading-relaxed font-normal">
-            Rooted in over 20 years of proven industry reputation, combining trusted methods with tomorrow's construction technologies.
+            Safety, Integrity, Professionalism, Innovation, Customer Satisfaction, Timely Delivery, and Sustainability are at the heart of everything we do.
           </p>
         </motion.div>
 
-        {/* 4 Pillars Grid */}
+        {/* 7 Core Values Grid */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
           {valuePillars.map((pillar, idx) => {
-            const Icon = iconMap[pillar.icon] || Award;
+            const Icon = iconMap[pillar.icon] || ShieldCheck;
             return (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="bg-[#F3F5F2] p-8 rounded-3xl border border-fir/10 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
+                transition={{ duration: 0.6, delay: idx * 0.08 }}
+                className="bg-[#F3F5F2] p-7 rounded-3xl border border-fir/10 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-lfgreen/20 border border-lfgreen/30 flex items-center justify-center text-lfgreen-dark mb-6 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-lfgreen/20 transition-all">
+                  <div className="w-12 h-12 rounded-2xl bg-lfgreen/20 border border-lfgreen/30 flex items-center justify-center text-lfgreen-dark mb-5 group-hover:scale-110 group-hover:bg-lfgreen group-hover:text-fir transition-all shadow-sm">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-fir mb-3 group-hover:text-lfgreen-dark transition-colors">
+                  <h3 className="text-lg font-extrabold text-fir mb-2 group-hover:text-lfgreen-dark transition-colors">
                     {pillar.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-fir/60 leading-relaxed font-normal">
+                  <p className="text-xs text-fir/60 leading-relaxed font-normal">
                     {pillar.description}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-fir/10 flex items-center justify-between text-[11px] font-semibold text-fir/40">
-                  <span>Pillar 0{idx + 1}</span>
-                  <span className="text-lfgreen-dark">Guaranteed Standard</span>
+                <div className="mt-6 pt-4 border-t border-fir/10 flex items-center justify-between text-[11px] font-bold text-fir/40">
+                  <span>Value 0{idx + 1}</span>
+                  <span className="text-lfgreen-dark uppercase tracking-wider">Naviron Standard</span>
                 </div>
               </motion.div>
             );

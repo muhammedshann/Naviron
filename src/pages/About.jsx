@@ -37,9 +37,9 @@ export default function About({ onNavigate }) {
       {/* 1. Page Header Banner */}
       <PageHeader
         badge="About Naviron"
-        title="Pioneering Engineering &"
-        highlightedTitle="Strategic Trading"
-        subtitle="Discover how Naviron combines innovative solutions and over two decades of Ainsnan legacy to serve Qatari businesses and infrastructure effectively."
+        title="Integrated Contracting &"
+        highlightedTitle="Facility Solutions"
+        subtitle="Fit-Out | Civil | MEP | Landscaping | Maintenance — Powered by 20+ years of Ainsnan heritage and modern engineering technologies across Qatar."
       />
 
       {/* 2. Our Mission Section (Curved Light Section) */}

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import PageHeader from '../components/PageHeader';
 import { blogPosts } from '../data/content';
 import PostModal from '../components/PostModal';
 import CTABanner from '../components/CTABanner';
-import { Search, BookOpen, Filter } from 'lucide-react';
+import { Search, Calendar, User, ArrowRight, BookOpen, Filter } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Blog({ onNavigate }) {
@@ -11,7 +10,7 @@ export default function Blog({ onNavigate }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Project Spotlight', 'Insights & Strategy', 'Industry Standards'];
+  const categories = ['All', 'Project Spotlight', 'Insights & Strategy', 'Industry Standards', 'General'];
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCat = selectedCategory === 'All' || post.category === selectedCategory;
@@ -24,14 +23,29 @@ export default function Blog({ onNavigate }) {
 
   return (
     <div className="pt-20 sm:pt-24">
-      {/* Header Banner */}
-      <PageHeader
-        badge="Naviron Journal"
-        title="Insights on Modern"
-        highlightedTitle="Construction"
-        titleEnd="Solutions"
-        subtitle="Stay informed with engineering field studies, landmark project reflections, and industry best practices from Qatar's construction sector."
-      />
+
+      {/* Header */}
+      <section className="py-16 text-center relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-lfgreen/10 rounded-full blur-[140px] pointer-events-none" />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.7 }}
+          className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        >
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-sage border border-fir/10 text-xs font-semibold text-fir/60 mb-4">
+            Naviron Journal
+          </span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-fir mb-6">
+            Insights on Modern{' '}
+            <span className="text-3d-sm">Construction</span> Solutions
+          </h1>
+          <p className="text-lg text-fir/50 leading-relaxed max-w-2xl mx-auto">
+            Stay informed with engineering field studies, landmark project reflections, and industry best practices from Qatar's construction sector.
+          </p>
+        </motion.div>
+      </section>
 
       {/* Filter & Search Bar */}
       <section className="pb-12 relative z-10">
@@ -39,10 +53,11 @@ export default function Blog({ onNavigate }) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-sage p-4 sm:p-6 rounded-3xl border border-fir/5 flex flex-col md:flex-row items-center justify-between gap-4"
           >
+
             {/* Category Chips */}
             <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
               <div className="hidden sm:flex items-center gap-1.5 text-xs text-fir/40 mr-2">
@@ -53,11 +68,10 @@ export default function Blog({ onNavigate }) {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${
-                    selectedCategory === cat
-                      ? 'bg-lfgreen text-fir shadow-md'
-                      : 'bg-white text-fir/50 hover:text-fir border border-fir/5'
-                  }`}
+                  className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${selectedCategory === cat
+                    ? 'bg-lfgreen text-fir shadow-md'
+                    : 'bg-white text-fir/50 hover:text-fir border border-fir/5'
+                    }`}
                 >
                   {cat}
                 </button>
@@ -75,17 +89,18 @@ export default function Blog({ onNavigate }) {
                 className="w-full pl-9 pr-4 py-2 bg-white border border-fir/10 rounded-xl text-xs text-fir placeholder-fir/30 focus:outline-none focus:border-lfgreen-dark transition-colors"
               />
             </div>
+
           </motion.div>
         </div>
       </section>
 
       {/* Posts Grid */}
-      <section className="pt-2 pb-24 sm:pb-36 relative z-10">
+      <section className="py-6 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             {filteredPosts.length === 0 ? (
@@ -94,8 +109,9 @@ export default function Blog({ onNavigate }) {
               </div>
             ) : (
               <div className="space-y-16">
-                {/* Featured Section Grid */}
+                {/* Featured Section Grid: Large Featured Story on Left, 2 Secondary Stories on Right */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
                   {/* 1. Large Featured Article (Left) */}
                   {filteredPosts[0] && (
                     <div
@@ -139,7 +155,7 @@ export default function Blog({ onNavigate }) {
                     </div>
                   )}
 
-                  {/* 2. Secondary Stacked Articles (Right) */}
+                  2. Secondary Stacked Articles (Right)
                   <div className="lg:col-span-5 space-y-10">
                     {filteredPosts.slice(1, 3).map((post, idx) => (
                       <div
@@ -147,9 +163,8 @@ export default function Blog({ onNavigate }) {
                         onClick={() => setSelectedPost(post)}
                         className="group cursor-pointer border-b border-fir/10 pb-8 last:border-b-0 last:pb-0"
                       >
-                        <div className={`p-3 rounded-2xl mb-4 border border-fir/5 overflow-hidden ${
-                          idx === 1 ? 'bg-[#DFEBDC]' : 'bg-sage/70'
-                        }`}>
+                        <div className={`p-3 rounded-2xl mb-4 border border-fir/5 overflow-hidden ${idx === 1 ? 'bg-[#DFEBDC]' : 'bg-sage/70'
+                          }`}>
                           <div className="h-44 rounded-xl overflow-hidden">
                             <img
                               src={post.image}
@@ -183,6 +198,7 @@ export default function Blog({ onNavigate }) {
                       </div>
                     ))}
                   </div>
+
                 </div>
 
                 {/* 3. Additional Posts Grid (if any) */}
@@ -240,6 +256,7 @@ export default function Blog({ onNavigate }) {
 
       {/* Bottom CTA Banner */}
       <CTABanner onNavigate={onNavigate} />
+
     </div>
   );
 }
